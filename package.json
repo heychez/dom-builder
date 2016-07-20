@@ -1,14 +1,14 @@
 {
   "name": "dom-builder",
   "version": "1.0.0",
-  "description": "Dom elements builder\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Deasy \u001b[2~wq\u001b[builder",
+  "description": "Dom elements easy builder",
   "main": "dom-builder.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heychez/dom-builder.git"
+    "url": "https://github.com/heychez/dom-builder.git"
   },
   "keywords": [
     "dom-builder",
