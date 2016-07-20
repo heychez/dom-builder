@@ -34,7 +34,7 @@ JS Code
                   .ele('li')
                       .ele('a', {href: '#', class: 'orange'}, 'orange')
                   .cl()
-                  .ele('li', 'coconaut')
+                  .ele('li', 'coconut')
                   .ele('br')
                   .ele('li')
                       .val('berries')
@@ -46,7 +46,8 @@ JS Code
     fruits.appendChild(myElement.parse(document));
 ```
 > Self closing tags like **BR** or **INPUT** don't need to close, just write **.ele('br')** without to add **.cl()**
-    
+
+> You can get the **string** html code with **myElement.body** or **myElement.toString()**
 
 Finally
 ```html
@@ -56,7 +57,7 @@ Finally
             <li>
                 <a href="#" class="orange">orange</a>
             </li>
-            <li>coconaut</li>
+            <li>coconut</li>
             <br>
             <li>berries</li>
         </ul>
