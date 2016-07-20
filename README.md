@@ -11,11 +11,11 @@ Builds Html elements from your JavaScript code in a simple and fast way.
 
 ### Use it
 ```html
-    <script type="text/javascript" src="builder.js"></script>
+    <script type="text/javascript" src="node_modules/dom-builder/dom-builder.js"></script>
 ```
 or
 ```js
-    var DOMBuilder = require('./dom-builder');
+    var DOMBuilder = require('dom-builder');
 ```
     
 
