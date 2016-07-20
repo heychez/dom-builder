@@ -1,6 +1,6 @@
 {
   "name": "dom-builder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Dom elements easy builder",
   "main": "dom-builder.js",
   "scripts": {
