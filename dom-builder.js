@@ -14,24 +14,24 @@
 
 
 var DOMBuilder = function () {
-	this.TAGS_SELF_CLOSING = ['area', 'base', 'br', 'col', 'command', 'embed', 'hr', 'img', 'input', 'keygen', 'link', 'meta', 'param', 'source', 'track', 'wbr']
+	this.SELF_CLOSING_TAGS = ['area', 'base', 'br', 'col', 'command', 'embed', 'hr', 'img', 'input', 'keygen', 'link', 'meta', 'param', 'source', 'track', 'wbr']
 	
 	this.body = '';
 	this.tags = [];
 };
 
-Builder.prototype.toString = function () {
+DOMBuilder.prototype.toString = function () {
 	return this.body;
 };
 
-Builder.prototype.parse = function (document) {
+DOMBuilder.prototype.parse = function (document) {
 	var wrapper = document.createElement('div');
 	wrapper.innerHTML = this.body;
 
 	return wrapper.firstChild;
 };
 
-Builder.prototype.ele = function (tag, arg2, arg3) {
+DOMBuilder.prototype.ele = function (tag, arg2, arg3) {
 	this.body = this.body.concat('<'+tag);
 
 	if (typeof arg2 == 'object') {
@@ -40,7 +40,7 @@ Builder.prototype.ele = function (tag, arg2, arg3) {
 		}
 	}
 
-	if (this.TAGS_SELF_CLOSING.indexOf(tag) == -1) {
+	if (this.SELF_CLOSING_TAGS.indexOf(tag) == -1) {
 		this.body = this.body.concat('>');
 
 		if (typeof arg2 == 'string') {
@@ -58,12 +58,12 @@ Builder.prototype.ele = function (tag, arg2, arg3) {
 	return this;
 };
 
-Builder.prototype.val = function (text) {
+DOMBuilder.prototype.val = function (text) {
 	this.body = this.body.concat(text);
 	return this;
 };
 
-Builder.prototype.cl = function () {
+DOMBuilder.prototype.cl = function () {
 	this.body = this.body.concat('</'+this.tags.pop()+'>');
 	return this;
 };
