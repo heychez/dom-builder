@@ -41,13 +41,21 @@ JS Code
                   .cl()
               .cl();
 ```
-```js
-    var fruits = document.getElementById('fruits');
-    fruits.appendChild(myElement.parse(document));
-```
 > Self closing tags like **BR** or **INPUT** don't need to close, just write **.ele('br')** without to add **.cl()**
 
+```js
+    var fruits = document.getElementById('fruits');
+    fruits.insertAdjacentHTML('beforeend', myElement.body);
+
+    // using Jquery
+    $('#fruits').append(myElement.body);
+
+    // other way
+    fruits.appendChild(myElement.parse(document));
+
+```
 > You can get the **string** html code with **myElement.body** or **myElement.toString()**
+> [insertAdjacentHTML](https://developer.mozilla.org/es/docs/Web/API/Element/insertAdjacentHTML) works very well
 
 Finally
 ```html
