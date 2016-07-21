@@ -55,9 +55,10 @@ JS Code
 
 ```
 > You can get the **string** html code with **myElement.body** or **myElement.toString()**
+
 > [insertAdjacentHTML](https://developer.mozilla.org/es/docs/Web/API/Element/insertAdjacentHTML) works very well
 
-Finally
+The result
 ```html
     <div id="fruits">
         <ul class="delicious">
