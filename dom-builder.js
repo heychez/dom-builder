@@ -35,9 +35,16 @@ DOMBuilder.prototype.ele = function (tag, arg2, arg3) {
 	this.body = this.body.concat('<'+tag);
 
 	if (typeof arg2 == 'object') {
-		for (var attr in arg2) {
-			this.body = this.body.concat(' '+attr+'='+'"'+arg2[attr]+'"');
-		}
+		for (let attr in arg2) {
+            if(attr === 'data'){
+                for(let dataAttr of Object.keys(arg2.data)){
+                    this.body = this.body.concat(' data-'+dataAttr+'='+'"'+arg2.data[dataAttr]+'"');
+                }
+            }
+            else {
+                this.body = this.body.concat(' '+attr+'='+'"'+arg2[attr]+'"');
+            }
+        }
 	}
 
 	if (this.SELF_CLOSING_TAGS.indexOf(tag) == -1) {
